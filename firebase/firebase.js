@@ -1,4 +1,4 @@
-import firebase from "firebase";
+import firebase from "firebase/app";
 import "firebase/database";
 
 const firebaseConfig = {
@@ -12,3 +12,4 @@ const firebaseConfig = {
 
 const fireDb = firebase.initializeApp(firebaseConfig);
 export default fireDb.database().ref();
+ 
