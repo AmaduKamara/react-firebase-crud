@@ -10,9 +10,11 @@ import App from "./App";
 import AddEdit from "./pages/AddEdit";
 import View from "./pages/View";
 import About from "./pages/About";
+import Header from "./components/Header";
 
 ReactDOM.render(
   <BrowserRouter>
+    <Header />
     <ToastContainer position="top-right" />
     <Routes>
       <Route path="/" element={<App />} />
