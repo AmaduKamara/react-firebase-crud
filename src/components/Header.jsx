@@ -1,7 +1,21 @@
-import React from "react";
-import { Link, NavLink } from "react-router-dom";
+import React, { useEffect, useState } from "react";
+import { Link, NavLink, useLocation } from "react-router-dom";
 
 const Header = () => {
+  const [activeTab, setActiveTab] = useState("home");
+
+  const location = useLocation();
+
+  useEffect(() => {
+    if (location.pathname === "/") {
+      setActiveTab("Home");
+    } else if (location.pathname === "/add") {
+      setActiveTab("AddContact");
+    } else if (location.pathname === "/about") {
+      setActiveTab("About");
+    }
+  }, [location]);
+
   return (
     <div className="bg-white py-5 shadow-lg sticky top-0 z-50">
       <div className="container mx-auto flex justify-between">
