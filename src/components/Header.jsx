@@ -11,6 +11,16 @@ const Header = () => {
         <ul className="flex items-center">
           <li className=" text-lg">
             <NavLink
+              to="/"
+              style={({ isActive }) => ({
+                color: isActive ? "teal" : "",
+              })}
+            >
+              Home
+            </NavLink>
+          </li>
+          <li className="ml-10 text-lg">
+            <NavLink
               to="/add"
               style={({ isActive }) => ({
                 color: isActive ? "teal" : "",
